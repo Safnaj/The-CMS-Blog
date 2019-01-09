@@ -1,0 +1,33 @@
+.navbar navbar-expand-sm bg-dark navbar-nav li,a{
+    text-decoration: none;
+    overflow: hidden;
+    color: #ffffff;
+    display: inline;;
+    padding-right: 10px;
+    list-style:none;
+}
+
+img{
+   margin: auto;
+   padding: auto;
+}
+
+.navbar-toggle{
+    background-color: #ffffff;
+    float: right;
+}
+
+.col-sm-8{
+
+}
+
+#Footer{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #fff;
+    text-align: center;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #343a40!important
+}
