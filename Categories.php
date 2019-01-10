@@ -1,4 +1,4 @@
-<?php require_once ("db/DBConnection.php"); ?>
+<?php require_once("database/DBConnection.php"); ?>
 <?php require_once ("Sessions.php"); ?>
 <?php require_once ("Functions.php"); ?>
 

@@ -1,3 +1,7 @@
+<?php require_once("database/DBConnection.php"); ?>
+<?php require_once ("Sessions.php"); ?>
+<?php require_once ("Functions.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +16,7 @@
 <body>
     <nav class="navbar navbar-expand-sm bg-dark">
         <div class="navbar-brand" href="Blog.php">
-            <img src="images/head.png" width="130px" height="50px">
+            <img class="logo" src="images/head.png" width="130px" height="50px">
         </div>
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -43,15 +47,54 @@
         </div>
         <div class="row">
             <div class="col-sm-8">
-                <h2>Test</h2>
-                <p>fadfabdf abfhdbfhabf dabf hbadsfhba fb dshfbah fbah sdfbh asdfbah sfba sflbasdf abdf
-                fadbfadbfadbfka dfsbahdfbhdsbf afbsakd fbsfk asdfiwheo cn dscowhoeoi fnsjd bfawoewh</p>
+                <?php
+                global $DBConnect;  //Database Connection
+                if(isset($_GET["SearchButton"])){
+                    $Search = $_GET["Search"];
+                    $Query = "SELECT * FROM posts WHERE datetime LIKE '%$Search%' OR
+                                    title LIKE '%$Search%' OR category LIKE '%$Search%' OR 
+                                    post LIKE '%$Search%'";
+                }
+                else{
+                    $Query = "SELECT * FROM posts ORDER BY datetime DESC ";
+                }
+
+                $Execute = mysqli_query($DBConnect,$Query);
+
+                while ($DataRows = mysqli_fetch_array($Execute)){
+                    $PostID = $DataRows["id"];
+                    $DateTime = $DataRows["datetime"];
+                    $Title = $DataRows["title"];
+                    $Category = $DataRows["category"];
+                    $Author = $DataRows["author"];
+                    $Image = $DataRows["image"];
+                    $Post = $DataRows["post"];
+                ?>
+               <div class="blogpost thumbnail">
+                   <img class="img-responsive img-rounded" src="uploads/<?php echo $Image;?>">
+                   <div class="caption">
+                       <h1 id="heading"><?php echo htmlentities($Title); ?></h1>
+                       <p class="description">Category : <?php echo htmlentities($Category);?> Published on
+                       <?php echo htmlentities($DateTime);?></p>
+                       <p class="post">
+                           <?php
+                               if(strlen($Post)>250){
+                                   $Post = substr($Post,0,250).'...';
+                               }
+                           echo $Post; ?>
+                       </p>
+                   </div>
+                   <a href="Single.php?id=<?php echo $PostID;?>"><span class="btn btn-info">Read More &rsaquo;</span> </a>
+               </div>
+                <?php }?>
             </div>
+            <!--Sidebar-->
             <div class="col-sm-offset-1 col-sm-3">
                 <h2>Test</h2>
                 <p>fadfabdf abfhdbfhabf dabf hbadsfhba fb dshfbah fbah sdfbh asdfbah sfba sflbasdf abdf
                     fadbfadbfadbfka dfsbahdfbhdsbf afbsakd fbsfk asdfiwheo cn dscowhoeoi fnsjd bfawoewh</p>
             </div>
+            <!--Sidebar-->
         </div>
     </div>
     <!--Main Area 0f Blog-->
