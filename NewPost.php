@@ -70,9 +70,13 @@ if(isset($_POST["Submit"])){
                     <a class="nav-link" href="Dashboard.php">
                         <span class="glyphicon glyphicon-home"></span>&nbspDashboard</a></i>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="NewPost.php">
+                <li class="nav-item">
+                    <a class="nav-link active" href="NewPost.php">
                         <span class="glyphicon glyphicon-file"></span>&nbspNew Post</a></i>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Posts.php">
+                        <span class="glyphicon glyphicon-book"></span>&nbspPosts</a></i>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="Categories.php">
@@ -85,6 +89,10 @@ if(isset($_POST["Submit"])){
                 <li class="nav-item">
                     <a class="nav-link" href="#">
                         <span class="glyphicon glyphicon-comment"></span>&nbspComments</a></i>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Blog.php" target="_blank">
+                        <span class="glyphicon glyphicon-equalizer"></span>&nbspView Site</a></i>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
