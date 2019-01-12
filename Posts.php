@@ -59,6 +59,12 @@
 
         <div class="col-sm-10">
             <h2>Posts</h2>
+            <div>
+                <?php
+                echo Message();
+                echo SuccessMessage();
+                ?>
+            </div>
             <div class="table-responsive">
                 <table class="table table-striped table-hover">
                     <tr>
@@ -70,6 +76,7 @@
                         <th>Banner</th>
                         <th>Comments</th>
                         <th>Action</th>
+                        <th>Preview</th>
                     </tr>
                     <?php
                         global $DBConnect;
@@ -88,13 +95,27 @@
                             ?>
                             <tr>
                                 <td><?php echo $SrNo; ?></td>
-                                <td><?php echo $Title; ?></td>
+                                <td><?php
+                                    if(strlen($Title)>20){
+                                        $Title = substr($Title,0,20).'..';
+                                    }
+                                    echo $Title;
+                                    ?>
+                                </td>
                                 <td><?php echo $DateTime; ?></td>
                                 <td><?php echo $Category; ?></td>
                                 <td><?php echo $Author; ?></td>
-                                <td><img src="uploads/<?php echo $Image;?>" width="40px" height="25px"></td>
+                                <td><img src="uploads/<?php echo $Image;?>" width="60px" height="28px"></td>
                                 <td>Processing</td>
-                                <td>Edit & Delete</td>
+                                <td>
+                                    <a href="EditPost.php?Edit=<?php echo $PostID;?>">
+                                        <span class="btn btn-info">Edit</span></a>
+                                    <a href="DeletePost?Delete=<?php echo $PostID;?>">
+                                        <span class="btn btn-danger">Delete</span></a>
+                                </td>
+                                <td><a href="Single.php?id=<?php echo $PostID;?>" target="_blank">
+                                        <span class="btn btn-success">Preview</span></a>
+                                </td>
                             </tr>
                             <?php
                         } ?>
