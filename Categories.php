@@ -41,7 +41,7 @@
     <script src="bootstrap/js/jquery-3.3.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/AdminStyle.css">
+    <link rel="stylesheet" href="bootstrap/css/AdminStyle.css">
 </head>
 <body>
 <div class="container-fluid">

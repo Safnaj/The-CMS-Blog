@@ -6,12 +6,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard</title>
+    <title>Posts</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <script src="bootstrap/js/jquery-3.3.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/AdminStyle.css">
+    <link rel="stylesheet" href="bootstrap/css/AdminStyle.css">
 </head>
 <body>
 <div class="container-fluid">
@@ -110,7 +110,7 @@
                                 <td>
                                     <a href="EditPost.php?Edit=<?php echo $PostID;?>">
                                         <span class="btn btn-info">Edit</span></a>
-                                    <a href="DeletePost?Delete=<?php echo $PostID;?>">
+                                    <a href="DeletePost.php?Delete=<?php echo $PostID;?>">
                                         <span class="btn btn-danger">Delete</span></a>
                                 </td>
                                 <td><a href="Single.php?id=<?php echo $PostID;?>" target="_blank">

@@ -2,6 +2,39 @@
 <?php require_once ("Sessions.php"); ?>
 <?php require_once ("Functions.php"); ?>
 
+<?php
+if(isset($_POST['Submit'])){
+    $Name=$_POST['Name'];
+    $Email=$_POST['Email'];
+    $Comments=$_POST['Comments'];
+    $CurrentTime = time();
+    $DateTime = strftime("%B-%d-%Y %H:%M:%S",$CurrentTime);
+    $DateTime;
+    $PostID = $_GET["id"];
+    $Admin = "Safnaj";
+    if(empty($Name)||empty($Email)||empty($Comments)) {
+        $_SESSION["ErrorMessage"] = "Please Fill All The Fileds..!";
+    }
+    elseif(strlen($Comments)>200){
+        $_SESSION["ErrorMessage"] = "Only 500 Characters are Allowed in Comments..!";
+    }
+    else{
+        global $DBConnect;
+        $PostIdFromURL = $_GET['id'];
+        $Query = "INSERT INTO comments(datetime,name,email,comment,status,post_id)
+                  VALUES('$DateTime','$Name','$Email','$Comments','OFF','$PostIdFromURL')";
+        $Execute = mysqli_query($DBConnect,$Query);
+        if($Execute){
+            $_SESSION["SuccessMessage"] = "Comment Submitted Successfully..!";
+            RedirectTo("Single.php?id={$PostID}");
+        }else{
+            $_SESSION["ErrorMessage"] = "Something Went Wrong..!";
+            RedirectTo("Single.php?id={$PostID}");
+        }
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +53,7 @@
     <script src="bootstrap/js/jquery-3.3.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/BlogStyle.css">
+    <link rel="stylesheet" href="bootstrap/css/BlogStyle.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-sm bg-dark">
@@ -56,6 +89,13 @@
     </div>
     <div class="row">
         <div class="col-sm-8">
+            <div>
+                <?php
+                echo Message();
+                echo SuccessMessage();
+                ?>
+            </div>
+
             <?php
             global $DBConnect;  //Database Connection
             if(isset($_GET["SearchButton"])){
@@ -92,6 +132,31 @@
                     </div>
                 </div>
             <?php }?>
+            <br>
+            <!--comments-->
+            <div class="comments">
+                <h4 align="center">Your Comments Here</h4>
+                <form method="post" action="Single.php?id=<?php echo $PostID; ?>" enctype="multipart/form-data">
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="title"><span class="FieldInfo">Name:</span></label>
+                            <input class="form-control" type="text" name="Name" id="Name" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="title"><span class="FieldInfo">Email:</span></label>
+                            <input class="form-control" type="text" name="Email" id="Email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="post"><span class="FieldInfo">Comments:</span></label>
+                            <textarea class="form-control" name="Comments" id="Comments" placeholder="Your Comments Here">
+                            </textarea>
+                        </div>
+                        <input class="btn btn-primary" type="submit" name="Submit" value="Submit">
+                    </fieldset>
+                </form>
+            </div>
+            <br>
+            <!--comments-->
         </div>
         <!--Sidebar-->
         <div class="col-sm-offset-1 col-sm-3">
