@@ -1,7 +1,10 @@
 <?php require_once("database/DBConnection.php"); ?>
 <?php require_once ("Sessions.php"); ?>
 <?php require_once ("Functions.php"); ?>
-
+<!--
+ Author Safnaj on 1/14/2019
+ Project Giant CMS
+-->
 <?php
 if(isset($_POST['Submit'])){
     $Name=$_POST['Name'];
@@ -134,6 +137,29 @@ if(isset($_POST['Submit'])){
             <?php }?>
             <br>
             <!--comments-->
+            <h4>Comments</h4>
+                <?php
+                    global $DBConnect;
+                    $PostIdFromURL = $_GET["id"];
+                    $CommentsQuery = "SELECT * FROM comments WHERE post_id='$PostIdFromURL' AND status='ON'";
+                    $Execute = mysqli_query($DBConnect,$CommentsQuery);
+
+                    while($DataRows = mysqli_fetch_array($Execute)){
+                        $CommentDate = $DataRows["datetime"];
+                        $CommenterName = $DataRows["name"];
+                        $Comment = $DataRows["comment"];
+                ?>
+                        <div class="CommentBlock">
+                            <img class="pull-left" src="images/avatar.png" width="70px" height="70px">
+                            <p class="commenter"><?php echo $CommenterName;?></p>
+                            <p><?php echo $CommentDate;?></p>
+                            <br>
+                            <p><?php echo $Comment;?></p>
+                        </div>
+                        <br>
+
+                    <?php } ?>
+
             <div class="comments">
                 <h4 align="center">Your Comments Here</h4>
                 <form method="post" action="Single.php?id=<?php echo $PostID; ?>" enctype="multipart/form-data">

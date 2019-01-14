@@ -88,7 +88,7 @@ if(isset($_POST["Submit"])){
                         <span class="glyphicon glyphicon-user"></span>&nbspManage Admins</a></i>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="Comments.php">
                         <span class="glyphicon glyphicon-comment"></span>&nbspComments</a></i>
                 </li>
                 <li class="nav-item">

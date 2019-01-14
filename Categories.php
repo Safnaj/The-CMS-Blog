@@ -3,6 +3,10 @@
 <?php require_once ("Functions.php"); ?>
 
 <?php
+/**
+ * Author Safnaj on 1/14/2019
+ * Project Giant CMS
+ **/
     if(isset($_POST['Submit'])){
         $Category=$_POST['Category'];
         $CurrentTime = time();

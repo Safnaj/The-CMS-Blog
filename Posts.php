@@ -1,7 +1,10 @@
 <?php require_once("database/DBConnection.php"); ?>
 <?php require_once ("Sessions.php"); ?>
 <?php require_once ("Functions.php"); ?>
-
+<!--
+ Author Safnaj on 1/14/2019
+ Project Giant CMS
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,7 +45,7 @@
                         <span class="glyphicon glyphicon-user"></span>&nbspManage Admins</a></i>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="Comments.php">
                         <span class="glyphicon glyphicon-comment"></span>&nbspComments</a></i>
                 </li>
                 <li class="nav-item">
