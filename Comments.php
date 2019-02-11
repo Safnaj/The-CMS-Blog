@@ -38,7 +38,7 @@
                         <span class="glyphicon glyphicon-th-list"></span>&nbspCategories</a></i>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="Admins.php">
                         <span class="glyphicon glyphicon-user"></span>&nbspManage Admins</a></i>
                 </li>
                 <li class="nav-item">
@@ -78,7 +78,7 @@
                     </tr>
                     <?php
                         global $DBConnect;
-                        $Query = "SELECT * FROM comments WHERE status='OFF'";
+                        $Query = "SELECT * FROM comments WHERE status='OFF' ORDER BY datetime DESC";
                         $Execute=mysqli_query($DBConnect,$Query);
                         $SrNo=0;
                         while ($DataRows = mysqli_fetch_array($Execute)){
@@ -98,9 +98,9 @@
                         <td><?php echo $CommenterName;?></td>
                         <td><?php echo $CommentDate;?></td>
                         <td><?php echo $Comment;?></td>
-                        <td><a href="ApproveComment.php?id=<?php echo $PostId;?>">
+                        <td><a href="ApproveComment.php?id=<?php echo $CommentID;?>">
                             <span class="btn btn-success">Approve</span></a></td>
-                        <td><a href="DeleteComment.php?Delete=<?php echo $PostID;?>">
+                        <td><a href="DeleteComment.php?id=<?php echo $CommentID;?>">
                                 <span class="btn btn-danger">Delete</span></a></td>
                         <td><a href="Single.php?id=<?php echo $PostId;?>" target="_blank">
                                 <span class="btn btn-primary">Preview</span></a></td>
@@ -124,6 +124,7 @@
                         <th>Name</th>
                         <th>Date</th>
                         <th>Comment</th>
+                        <th>Approved By</th>
                         <th>Delete</th>
                         <th>Details</th>
                     </tr>
@@ -132,6 +133,7 @@
                         $Query = "SELECT * FROM comments WHERE status='ON'";
                         $Execute=mysqli_query($DBConnect,$Query);
                         $SrNo=0;
+                        $Admin = "Safnaj";
                         while ($DataRows = mysqli_fetch_array($Execute)){
                             $CommentID = $DataRows["id"];
                             $CommentDate = $DataRows["datetime"];
@@ -143,13 +145,17 @@
                             if(strlen($CommentDate)>15){
                                 $CommentDate = substr($CommentDate,0,15).'...';
                             }
+                            if(strlen($Comment)>35){
+                                $Comment = substr($Comment,0,15).'...';
+                            }
                         ?>
                         <tr>
                             <td><?php echo $SrNo; ?></td>
                             <td><?php echo $CommenterName;?></td>
                             <td><?php echo $CommentDate;?></td>
                             <td><?php echo $Comment;?></td>
-                            <td><a href="DeleteComment.php?Delete=<?php echo $PostId;?>">
+                            <td><?php echo $Admin;?></td>
+                            <td><a href="DeleteComment.php?id=<?php echo $CommentID;?>">
                                     <span class="btn btn-danger">Delete</span></a>
                             </td>
                             <td><a href="Single.php?id=<?php echo $PostId;?>" target="_blank">

@@ -10,13 +10,13 @@
 if(isset($_GET["id"])){
     $PostId = $_GET["id"];
     global $DBConnect;
-    $Query = "DELETE FROM comments WHERE id='$PostId'";
+    $Query = "DELETE FROM category WHERE id='$PostId'";
     $Execute = mysqli_query($DBConnect,$Query);
     if($Execute){
-        $_SESSION["SuccessMessage"]="Comment Deleted Successfully..!";
-        RedirectTo("Comments.php");
+        $_SESSION["SuccessMessage"]="Category Deleted Successfully..!";
+        RedirectTo("Categories.php");
     }else{
         $_SESSION["ErrorMessage"]="Something Went Wrong..!";
-        RedirectTo("Comments.php");
+        RedirectTo("Categories.php");
     }
 }

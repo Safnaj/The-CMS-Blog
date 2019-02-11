@@ -84,7 +84,7 @@ if(isset($_POST["Submit"])){
                         <span class="glyphicon glyphicon-th-list"></span>&nbspCategories</a></i>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="Admins.php">
                         <span class="glyphicon glyphicon-user"></span>&nbspManage Admins</a></i>
                 </li>
                 <li class="nav-item">

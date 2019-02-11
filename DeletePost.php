@@ -21,7 +21,7 @@ if(isset($_POST["Submit"])){
 
         $DeleteId = $_GET['Delete'];
         global $DBConnect;
-        $Query = "DELETE FROM posts WHERE id='$DeleteId'";
+        $Query = "DELETE FROM posts WHERE id = '$DeleteId'";
         $Execute = mysqli_query($DBConnect,$Query);
 
         move_uploaded_file($_FILES["Image"]["tmp_name"],$Target);
@@ -73,7 +73,7 @@ if(isset($_POST["Submit"])){
                         <span class="glyphicon glyphicon-th-list"></span>&nbspCategories</a></i>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="Admins.php">
                         <span class="glyphicon glyphicon-user"></span>&nbspManage Admins</a></i>
                 </li>
                 <li class="nav-item">

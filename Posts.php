@@ -21,7 +21,7 @@
     <div class="row">
 
         <!--Sidebar-->
-        <div class="col-sm-2">
+        <div class="col-sm-2" id="sidebar">
             <h2>Admin Panel</h2>
             <ul id="Side_Menu" class="nav nav-pills flex-column">
                 <li class="nav-item">
@@ -41,7 +41,7 @@
                         <span class="glyphicon glyphicon-th-list"></span>&nbspCategories</a></i>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="Admins.php">
                         <span class="glyphicon glyphicon-user"></span>&nbspManage Admins</a></i>
                 </li>
                 <li class="nav-item">
@@ -109,7 +109,37 @@
                                 <td><?php echo $Category; ?></td>
                                 <td><?php echo $Author; ?></td>
                                 <td><img src="uploads/<?php echo $Image;?>" width="60px" height="28px"></td>
-                                <td>Processing</td>
+                                <td>
+                                    <!--Approved Comments Count-->
+                                    <?php
+                                    global $DBConnect;
+                                    $SQL = "SELECT COUNT(*) FROM comments WHERE post_id='$PostID' AND status='ON'";
+                                    $Result = mysqli_query($DBConnect,$SQL);
+                                    $Count = mysqli_fetch_array($Result);
+                                    $Total = array_shift($Count);   //Array to String
+                                    if($Total>0){
+                                        ?>
+                                        <span class="label pull-right label-success">
+                                        <?php echo $Total; ?>
+                                        </span>
+                                    <?php } ?>
+                                    <!--Approved Comments Count-->
+                                    <!--------------------------------------------------------------------------------->
+                                    <!--Pending Comments Count-->
+                                    <?php
+                                    global $DBConnect;
+                                    $SQL = "SELECT COUNT(*) FROM comments WHERE post_id='$PostID' AND status='OFF'";
+                                    $Result = mysqli_query($DBConnect,$SQL);
+                                    $Count = mysqli_fetch_array($Result);
+                                    $Total = array_shift($Count);   //Array to String
+                                    if($Total>0){
+                                        ?>
+                                        <span class="label pull-left label-danger">
+                                        <?php echo $Total; ?>
+                                        </span>
+                                    <?php } ?>
+                                    <!--Pending COmments Count-->
+                                </td>
                                 <td>
                                     <a href="EditPost.php?Edit=<?php echo $PostID;?>">
                                         <span class="btn btn-info">Edit</span></a>
@@ -123,7 +153,6 @@
                             <?php
                         } ?>
                 </table>
-
             </div>
         </div>
     </div>

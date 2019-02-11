@@ -72,11 +72,11 @@
                         <span class="glyphicon glyphicon-th-list"></span>&nbspCategories</a></i>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="Admins.php">
                         <span class="glyphicon glyphicon-user"></span>&nbspManage Admins</a></i>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="Comments.php">
                         <span class="glyphicon glyphicon-comment"></span>&nbspComments</a></i>
                 </li>
                 <li class="nav-item">
@@ -119,6 +119,7 @@
                         <th>Date&Time</th>
                         <th>Category Name</th>
                         <th>Author</th>
+                        <th>Action</th>
                     </tr>
                     <?php
                         global $DBConnect;
@@ -137,6 +138,9 @@
                         <td><?php echo $DateTime; ?></td>
                         <td><?php echo $Name; ?></td>
                         <td><?php echo $Author; ?></td>
+                        <td><a href="DeleteCategory.php?id=<?php echo $id;?>">
+                                <span class="btn btn-danger">Delete</span></a>
+                        </td>
                     </tr>
                     <?php }?> <!--End of While Loop-->
                 </table>

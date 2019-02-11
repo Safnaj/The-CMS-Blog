@@ -98,7 +98,7 @@ if(isset($_POST['Submit'])){
                 echo SuccessMessage();
                 ?>
             </div>
-
+            <!--Search Function-->
             <?php
             global $DBConnect;  //Database Connection
             if(isset($_GET["SearchButton"])){

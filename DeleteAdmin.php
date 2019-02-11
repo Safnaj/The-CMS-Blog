@@ -4,19 +4,19 @@
 
 <?php
 /**
- * Author Safnaj on 1/14/2019
+ * Author Safnaj on 2/11/2019
  * Project Giant CMS
  **/
 if(isset($_GET["id"])){
-    $PostId = $_GET["id"];
+    $Id = $_GET["id"];
     global $DBConnect;
-    $Query = "DELETE FROM comments WHERE id='$PostId'";
+    $Query = "DELETE FROM admins WHERE id='$Id'";
     $Execute = mysqli_query($DBConnect,$Query);
     if($Execute){
-        $_SESSION["SuccessMessage"]="Comment Deleted Successfully..!";
-        RedirectTo("Comments.php");
+        $_SESSION["SuccessMessage"]="Admin Deleted Successfully..!";
+        RedirectTo("Admins.php");
     }else{
         $_SESSION["ErrorMessage"]="Something Went Wrong..!";
-        RedirectTo("Comments.php");
+        RedirectTo("Admins.php");
     }
 }
