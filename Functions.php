@@ -19,4 +19,18 @@ function Login($Username, $Password){
         return null;
     }
 }
+
+function LoggedIn(){
+    if(isset($_SESSION["Username"])){
+        return true;
+    }
+}
+
+function ConfirmLogin(){
+    if(!LoggedIn()){
+        $_SESSION["ErrorMessage"] = "Login Required..!";
+        RedirectTo("Login.php");
+    }
+}
+
 ?>

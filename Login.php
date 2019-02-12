@@ -66,11 +66,11 @@ if(isset($_POST['Submit'])){
         <div class="col-sm-offset-4 col-sm-4">
 
             <br><br><br><br>
+            <h2>Admin Login</h2>
             <?php
             echo Message();
             echo SuccessMessage();
             ?>
-            <h2>Admin Login</h2>
             <br>
             <div class="login">
             <br>

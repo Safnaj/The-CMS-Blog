@@ -1,6 +1,7 @@
 <?php require_once("database/DBConnection.php"); ?>
 <?php require_once ("Sessions.php"); ?>
 <?php require_once ("Functions.php"); ?>
+<?php ConfirmLogin() ?>
 
 <?php
 if(isset($_POST["Submit"])){
@@ -11,7 +12,7 @@ if(isset($_POST["Submit"])){
     $CurrentTime = time();
     $DateTime = strftime("%B-%d-%Y %H:%M:%S",$CurrentTime);
     $DateTime;
-    $Admin = "Safnaj";
+    $Admin = $_SESSION["Username"];
     $Image = $_FILES["Image"]["name"];
     $Target = "uploads/".basename($_FILES["Image"]["name"]);
 
@@ -95,7 +96,7 @@ if(isset($_POST["Submit"])){
                         <span class="glyphicon glyphicon-equalizer"></span>&nbspView Site</a></i>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="Logout.php">
                         <span class="glyphicon glyphicon-off"></span>&nbspLogout</a></i>
                 </li>
             </ul>

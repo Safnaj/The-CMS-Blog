@@ -10,7 +10,8 @@
     if(isset($_GET["id"])){
         $PostId = $_GET["id"];
         global $DBConnect;
-        $Query = "UPDATE comments SET status='ON' WHERE id='$PostId'";
+        $Admin = $_SESSION["Username"];
+        $Query = "UPDATE comments SET status='ON', approvedBy='$Admin' WHERE id='$PostId'";
         $Execute = mysqli_query($DBConnect,$Query);
         if($Execute){
             $_SESSION["SuccessMessage"]="Comment Approved Successfully..!";

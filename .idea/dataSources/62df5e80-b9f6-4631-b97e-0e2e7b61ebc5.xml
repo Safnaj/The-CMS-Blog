@@ -1035,28 +1035,34 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="237" name="status">
+    <column id="255" parent="237" name="approvedBy">
       <Position>6</Position>
+      <DataType>varchar(200)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="256" parent="237" name="status">
+      <Position>7</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="237" name="post_id">
-      <Position>7</Position>
+    <column id="257" parent="237" name="post_id">
+      <Position>8</Position>
       <DataType>int(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="257" parent="237" name="PostID">
+    <index id="258" parent="237" name="PostID">
       <ColNames>post_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="258" parent="237" name="PRIMARY">
+    <key id="259" parent="237" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="259" parent="237" name="PostID">
+    <foreign-key id="260" parent="237" name="PostID">
       <ColNames>post_id</ColNames>
       <RefSchemaName>cms</RefSchemaName>
       <RefTableName>posts</RefTableName>
@@ -1064,50 +1070,50 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="260" parent="238" name="id">
+    <column id="261" parent="238" name="id">
       <Position>1</Position>
       <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="261" parent="238" name="datetime">
+    <column id="262" parent="238" name="datetime">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="262" parent="238" name="title">
+    <column id="263" parent="238" name="title">
       <Position>3</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="238" name="category">
+    <column id="264" parent="238" name="category">
       <Position>4</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="264" parent="238" name="author">
+    <column id="265" parent="238" name="author">
       <Position>5</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="238" name="image">
+    <column id="266" parent="238" name="image">
       <Position>6</Position>
       <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="266" parent="238" name="post">
+    <column id="267" parent="238" name="post">
       <Position>7</Position>
       <DataType>varchar(10000)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="267" parent="238" name="PRIMARY">
+    <key id="268" parent="238" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

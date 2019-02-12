@@ -14,7 +14,7 @@ if(isset($_POST['Submit'])){
     $DateTime = strftime("%B-%d-%Y %H:%M:%S",$CurrentTime);
     $DateTime;
     $PostID = $_GET["id"];
-    $Admin = "Safnaj";
+    $Admin = $_SESSION["Username"];
     if(empty($Name)||empty($Email)||empty($Comments)) {
         $_SESSION["ErrorMessage"] = "Please Fill All The Fileds..!";
     }
@@ -24,8 +24,8 @@ if(isset($_POST['Submit'])){
     else{
         global $DBConnect;
         $PostIdFromURL = $_GET['id'];
-        $Query = "INSERT INTO comments(datetime,name,email,comment,status,post_id)
-                  VALUES('$DateTime','$Name','$Email','$Comments','OFF','$PostIdFromURL')";
+        $Query = "INSERT INTO comments(datetime,name,email,comment,approvedBy,status,post_id)
+                  VALUES('$DateTime','$Name','$Email','$Comments','pending','OFF','$PostIdFromURL')";
         $Execute = mysqli_query($DBConnect,$Query);
         if($Execute){
             $_SESSION["SuccessMessage"] = "Comment Submitted Successfully..!";

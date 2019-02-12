@@ -1,6 +1,7 @@
 <?php require_once("database/DBConnection.php"); ?>
 <?php require_once ("Sessions.php"); ?>
 <?php require_once ("Functions.php"); ?>
+<?php ConfirmLogin() ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -50,7 +51,7 @@
                         <span class="glyphicon glyphicon-equalizer"></span>&nbspView Site</a></i>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="Logout.php">
                         <span class="glyphicon glyphicon-off"></span>&nbspLogout</a></i>
                 </li>
             </ul>
@@ -139,6 +140,7 @@
                             $CommentDate = $DataRows["datetime"];
                             $CommenterName = $DataRows["name"];
                             $Comment = $DataRows["comment"];
+                            $ApprovedBy = $DataRows["approvedBy"];
                             $PostId = $DataRows["post_id"];
                             $SrNo++;
 
@@ -151,10 +153,10 @@
                         ?>
                         <tr>
                             <td><?php echo $SrNo; ?></td>
-                            <td><?php echo $CommenterName;?></td>
-                            <td><?php echo $CommentDate;?></td>
-                            <td><?php echo $Comment;?></td>
-                            <td><?php echo $Admin;?></td>
+                            <td><?php echo $CommenterName; ?></td>
+                            <td><?php echo $CommentDate; ?></td>
+                            <td><?php echo $Comment; ?></td>
+                            <td><?php echo $ApprovedBy; ?></td>
                             <td><a href="DeleteComment.php?id=<?php echo $CommentID;?>">
                                     <span class="btn btn-danger">Delete</span></a>
                             </td>
