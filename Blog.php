@@ -51,12 +51,26 @@
                 global $DBConnect;  //Database Connection
                 if(isset($_GET["SearchButton"])){
                     $Search = $_GET["Search"];
+                    //Query when Search Button Activated
                     $Query = "SELECT * FROM posts WHERE datetime LIKE '%$Search%' OR
                                     title LIKE '%$Search%' OR category LIKE '%$Search%' OR 
                                     post LIKE '%$Search%'";
                 }
+                //Query when pagination is Active. Ex : Blog.php?Page=1
+                elseif (isset($_GET["Page"])){
+                    $Page = $_GET["Page"];
+
+                    if($Page==0 || $Page < 1){
+                        $ShowPostFrom = 0;
+                    }
+                    else
+                    $ShowPostFrom = ($Page*5)-5;    //Pagination Algorithm
+                    $Query = "SELECT * FROM posts ORDER BY datetime DESC LIMIT $ShowPostFrom,5";
+
+                }
                 else{
-                    $Query = "SELECT * FROM posts ORDER BY datetime DESC ";
+                    //Default Query
+                    $Query = "SELECT * FROM posts ORDER BY datetime DESC LIMIT 0,5";
                 }
 
                 $Execute = mysqli_query($DBConnect,$Query);
@@ -87,12 +101,41 @@
                    <a href="Single.php?id=<?php echo $PostID;?>"><span class="btn btn-info">Read More &rsaquo;</span> </a>
                </div>
                 <?php }?>
+
+                <nav>
+                    <ul class="pagination pull-left pagination-lg">
+
+                <?php
+                    global $DBConnect;
+                    $QueryPagination = "SELECT COUNT(*) FROM posts";
+                    $ExecutePagination = mysqli_query($DBConnect,$QueryPagination);
+                    $DataRowsPagination = mysqli_fetch_array($ExecutePagination);
+                    $TotalPosts = array_shift($DataRowsPagination);
+
+                    $PostPagination = $TotalPosts/5;
+                    $PostPagination = ceil($PostPagination);
+
+                    for ($i=1; $i<=$PostPagination; $i++){
+                    if ($i=$Page){
+                ?>
+                        <li class="active"><a href="Blog.php?Page=<?php echo $i?>"><?php echo $i ?></a></li>
+                <?php
+                    }else{
+                        ?>
+                        <li><a href="Blog.php?Page=<?php echo $i?>"><?php echo $i ?></a></li>
+                        <?php
+                        }
+                    }
+                ?>
+                    </ul>
+                </nav>
             </div>
             <!--Sidebar-->
             <div class="col-sm-offset-1 col-sm-3">
                 <h2>Test</h2>
                 <p>fadfabdf abfhdbfhabf dabf hbadsfhba fb dshfbah fbah sdfbh asdfbah sfba sflbasdf abdf
-                    fadbfadbfadbfka dfsbahdfbhdsbf afbsakd fbsfk asdfiwheo cn dscowhoeoi fnsjd bfawoewh</p>
+                    fadbfadbfadbfka dfsbahdfbhdsbf afbsakd fbsfk asdfiwheo cn dscowhoeoi fnsjd bfawoewh
+                </p>
             </div>
             <!--Sidebar-->
         </div>

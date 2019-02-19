@@ -6,6 +6,7 @@
  Project Giant CMS
 -->
 <?php
+//Comments Area
 if(isset($_POST['Submit'])){
     $Name=$_POST['Name'];
     $Email=$_POST['Email'];
@@ -103,11 +104,13 @@ if(isset($_POST['Submit'])){
             global $DBConnect;  //Database Connection
             if(isset($_GET["SearchButton"])){
                 $Search = $_GET["Search"];
+                //Query for the Search Option
                 $Query = "SELECT * FROM posts WHERE datetime LIKE '%$Search%' OR
                                     title LIKE '%$Search%' OR category LIKE '%$Search%' OR 
                                     post LIKE '%$Search%'";
             }
             else{
+                //Query as Default
                 $PostIdFromURL = $_GET["id"];
                 $Query = "SELECT * FROM posts WHERE id='$PostIdFromURL' ORDER BY datetime DESC ";
             }
