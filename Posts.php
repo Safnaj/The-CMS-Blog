@@ -23,7 +23,8 @@
     <div class="row">
 
         <!--Sidebar-->
-        <div class="col-sm-2" id="sidebar">
+        <div class="col-sm-2">
+            <div class="SideBar">
             <h2>Admin Panel</h2>
             <ul id="Side_Menu" class="nav nav-pills flex-column">
                 <li class="nav-item">
@@ -59,6 +60,7 @@
                         <span class="glyphicon glyphicon-off"></span>&nbspLogout</a></i>
                 </li>
             </ul>
+            </div>
         </div>
         <!--Sidebar-->
 

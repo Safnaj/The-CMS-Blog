@@ -19,6 +19,10 @@ ul.nav a:hover {
     color: #fff !important;
     display:block;
 }
+.SideBar{
+    position: fixed;
+    width: 15%;
+}
 
 #Side_Menu a{
     color: #fff;
