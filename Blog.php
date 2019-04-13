@@ -26,7 +26,7 @@
         </button>
         <div class="collapse navbar-collapse" id="collapse">
             <ul class="nav navbar-nav">
-                <li><a href="#">Home</a></li>
+                <li><a href="Blog.php?Page=0">Home</a></li>
                 <li><a href="#">Categories</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact Us</a></li>
@@ -65,7 +65,7 @@
                     }
                     else
                     $ShowPostFrom = ($Page*5)-5;    //Pagination Algorithm
-                    $Query = "SELECT * FROM posts ORDER BY datetime DESC LIMIT $ShowPostFrom,5";
+                    $Query = "SELECT * FROM posts ORDER BY datetime DESC LIMIT $ShowPostFrom,5"; //LIMIT FROM to Next 5
 
                 }
                 else{
@@ -101,10 +101,8 @@
                    <a href="Single.php?id=<?php echo $PostID;?>"><span class="btn btn-info">Read More &rsaquo;</span> </a>
                </div>
                 <?php }?>
-
                 <nav>
                     <ul class="pagination pull-left pagination-lg">
-
                 <?php
                     global $DBConnect;
                     $QueryPagination = "SELECT COUNT(*) FROM posts";
@@ -112,18 +110,21 @@
                     $DataRowsPagination = mysqli_fetch_array($ExecutePagination);
                     $TotalPosts = array_shift($DataRowsPagination);
 
-                    $PostPagination = $TotalPosts/5;
-                    $PostPagination = ceil($PostPagination);
+                    //echo $TotalPosts;
+                    $PostPerPage = $TotalPosts/5;
+                    $PostPerPage = ceil($PostPerPage); //ceil function to ignore float numbers
 
-                    for ($i=1; $i<=$PostPagination; $i++){
-                    if ($i=$Page){
-                ?>
-                        <li class="active"><a href="Blog.php?Page=<?php echo $i?>"><?php echo $i ?></a></li>
-                <?php
-                    }else{
-                        ?>
-                        <li><a href="Blog.php?Page=<?php echo $i?>"><?php echo $i ?></a></li>
-                        <?php
+                    for($i=1; $i<=$PostPerPage; $i++) {
+                        if(isset($Page)) {
+                            if ($i == $Page) {
+                                ?>
+                                <li class="active"><a href="Blog.php?Page=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+                                <?php
+                            } else {
+                                ?>
+                                <li><a href="Blog.php?Page=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+                                <?php
+                            }
                         }
                     }
                 ?>
