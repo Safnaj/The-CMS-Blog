@@ -141,7 +141,7 @@ if(isset($_POST['Submit'])){
                     </tr>
                     <?php
                     global $DBConnect;
-                    $ViewQuery = "SELECT * FROM admins ORDER BY datetime desc";
+                    $ViewQuery = "SELECT * FROM admins ORDER BY datetime DESC";
                     $Execute = mysqli_query($DBConnect,$ViewQuery);
                     $srNo=0;
                     while($DataRows = mysqli_fetch_array($Execute)){

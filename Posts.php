@@ -85,12 +85,14 @@
                         <th>Action</th>
                         <th>Preview</th>
                     </tr>
+
                     <?php
                         global $DBConnect;
-                        $ViewQuery = "SELECT * FROM posts ORDER BY datetime desc";
-                        $Execute = mysqli_query($DBConnect,$ViewQuery);
+                        $ViewQuery = "SELECT * FROM posts ORDER BY datetime DESC";
+                        $Execute = mysqli_query($DBConnect,$ViewQuery) or die( mysqli_error($DBConnect));
                         $SrNo=0;
-                        while($DataRows=mysqli_fetch_array($Execute)) {
+
+                        while($DataRows = mysqli_fetch_array($Execute)){
                             $PostID = $DataRows["id"];
                             $DateTime = $DataRows["datetime"];
                             $Title = $DataRows["title"];

@@ -25,8 +25,8 @@ if(isset($_POST['Submit'])){
     else{
         global $DBConnect;
         $PostIdFromURL = $_GET['id'];
-        $Query = "INSERT INTO comments(datetime,name,email,comment,approvedBy,status,post_id)
-                  VALUES('$DateTime','$Name','$Email','$Comments','pending','OFF','$PostIdFromURL')";
+        $Query = "INSERT INTO `comments`(`datetime`, `name`, `email`, `comment`, `approvedBy`, `status`, `post_id`)
+                  VALUES('$DateTime','$Name','$Email','$Comments','$Admin','OFF','$PostIdFromURL')";
         $Execute = mysqli_query($DBConnect,$Query);
         if($Execute){
             $_SESSION["SuccessMessage"] = "Comment Submitted Successfully..!";
