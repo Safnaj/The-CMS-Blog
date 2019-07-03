@@ -81,7 +81,7 @@ if(isset($_POST["Submit"])){
                         <span class="glyphicon glyphicon-comment"></span>&nbspComments</a></i>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Blog.php" target="_blank">
+                    <a class="nav-link" href="Index.php" target="_blank">
                         <span class="glyphicon glyphicon-equalizer"></span>&nbspView Site</a></i>
                 </li>
                 <li class="nav-item">

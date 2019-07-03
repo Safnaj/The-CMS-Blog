@@ -26,12 +26,12 @@
         </button>
         <div class="collapse navbar-collapse" id="collapse">
             <ul class="nav navbar-nav">
-                <li><a href="Blog.php?Page=0">Home</a></li>
+                <li><a href="Index.php?Page=0">Home</a></li>
                 <li><a href="#">Categories</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
-            <form action="Blog.php" class="navbar-form navbar-right">
+            <form action="Index.php" class="navbar-form navbar-right">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Search" name="Search">
                 </div>
@@ -56,7 +56,7 @@
                                     title LIKE '%$Search%' OR category LIKE '%$Search%' OR 
                                     post LIKE '%$Search%'";
                 }
-                //Query when pagination is Active. Ex : Blog.php?Page=1
+                //Query when pagination is Active. Ex : Index.php?Page=1
                 elseif (isset($_GET["Page"])){
                     $Page = $_GET["Page"];
 
@@ -118,11 +118,11 @@
                         if(isset($Page)) {
                             if ($i == $Page) {
                                 ?>
-                                <li class="active"><a href="Blog.php?Page=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+                                <li class="active"><a href="Index.php?Page=<?php echo $i; ?>"><?php echo $i; ?></a></li>
                                 <?php
                             } else {
                                 ?>
-                                <li><a href="Blog.php?Page=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+                                <li><a href="Index.php?Page=<?php echo $i; ?>"><?php echo $i; ?></a></li>
                                 <?php
                             }
                         }

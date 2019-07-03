@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d6346e3-cdda-458d-8cfb-bd8a6e968270" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml___jb_tmp___" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Admins.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admins.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/Index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/Categories.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comments.php" beforeDir="false" afterPath="$PROJECT_DIR$/Comments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DeletePost.php" beforeDir="false" afterPath="$PROJECT_DIR$/DeletePost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EditPost.php" beforeDir="false" afterPath="$PROJECT_DIR$/EditPost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewPost.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewPost.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/Posts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Single.php" beforeDir="false" afterPath="$PROJECT_DIR$/Single.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/Admins.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1110">
-              <caret line="138" column="41" lean-forward="true" selection-start-line="138" selection-start-column="41" selection-end-line="138" selection-end-column="41" />
+              <caret line="138" column="41" selection-end-line="175" />
             </state>
           </provider>
         </entry>
@@ -73,8 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+            <state relative-caret-position="192">
+              <caret line="104" column="17" lean-forward="true" selection-start-line="62" selection-end-line="104" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -83,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/Posts.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="122" column="75" selection-start-line="122" selection-start-column="75" selection-end-line="122" selection-end-column="75" />
+              <caret line="101" column="54" lean-forward="true" selection-start-line="101" selection-start-column="54" selection-end-line="101" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -92,7 +95,7 @@
         <entry file="file://$PROJECT_DIR$/Comments.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-578">
-              <caret line="92" column="36" lean-forward="true" selection-start-line="92" selection-start-column="36" selection-end-line="92" selection-end-column="36" />
+              <caret line="92" column="36" selection-start-line="92" selection-start-column="36" selection-end-line="92" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -107,19 +110,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blog.php">
+        <entry file="file://$PROJECT_DIR$/Index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+            <state relative-caret-position="-1171">
+              <caret line="12" column="96" selection-start-line="12" selection-start-column="96" selection-end-line="12" selection-end-column="96" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Single.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1615">
+              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Single.php">
+        <entry file="file://$PROJECT_DIR$/Test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+            <state relative-caret-position="204">
+              <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -145,7 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Test.html" />
         <option value="$PROJECT_DIR$/Function.php" />
         <option value="$PROJECT_DIR$/Sidebar.php" />
         <option value="$PROJECT_DIR$/db/DBConnection.php" />
@@ -174,14 +185,16 @@
         <option value="$PROJECT_DIR$/Admins.php" />
         <option value="$PROJECT_DIR$/Posts.php" />
         <option value="$PROJECT_DIR$/Single.php" />
+        <option value="$PROJECT_DIR$/Test.html" />
+        <option value="$PROJECT_DIR$/Admin2.php" />
       </list>
     </option>
   </component>
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 5.6" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.1" />
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -216,11 +229,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="last_opened_file_path" value="C:/wamp64/bin/php/php5.6.31/php.exe" />
+    <property name="last_opened_file_path" value="C:/wamp64/bin/php/php5.6.31/php-cgi.exe" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -241,6 +254,7 @@
   </component>
   <component name="RunManager">
     <configuration name="localhost" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" port="6630">
+      <CommandLine workingDirectory="C:/wamp64/bin/php/php5.6.31" />
       <method v="2" />
     </configuration>
   </component>
@@ -281,12 +295,23 @@
       <workItem from="1561797785758" duration="311000" />
       <workItem from="1561800229449" duration="139000" />
       <workItem from="1562068498530" duration="1557000" />
-      <workItem from="1562073670898" duration="3696000" />
+      <workItem from="1562073670898" duration="9506000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="The-CMS-Blog - 2019.07.03 at 12h 49m 57s.xml">
+      <configuration name="The-CMS-Blog" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="The-CMS-Blog - 2019.07.03 at 12h 50m 20s.xml">
+      <configuration name="The-CMS-Blog" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="The-CMS-Blog - 2019.07.03 at 13h 10m 35s.xml">
+      <configuration name="The-CMS-Blog" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133085000" />
+    <option name="totallyTimeSpent" value="138895000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -296,17 +321,17 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3290938" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3290938" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3289689" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.3289689" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="12" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -317,17 +342,19 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand>
+      <path>
+        <item name="The-CMS-Blog" type="b2602c69:ProjectViewProjectNode" />
+        <item name="The-CMS-Blog" type="462c0819:PsiDirectoryNode" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/sdad.php" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/62df5e80-b9f6-4631-b97e-0e2e7b61ebc5/console.sql" />
     <entry file="file://$PROJECT_DIR$/Sidebar.php" />
-    <entry file="file://$PROJECT_DIR$/Test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bootstrap/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -413,31 +440,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Posts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="122" column="75" selection-start-line="122" selection-start-column="75" selection-end-line="122" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Comments.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-578">
-          <caret line="92" column="36" lean-forward="true" selection-start-line="92" selection-start-column="36" selection-end-line="92" selection-end-column="36" />
+          <caret line="92" column="36" selection-start-line="92" selection-start-column="36" selection-end-line="92" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -491,17 +497,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Admins.php">
+    <entry file="file://$PROJECT_DIR$/Index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="138" column="41" lean-forward="true" selection-start-line="138" selection-start-column="41" selection-end-line="138" selection-end-column="41" />
+        <state relative-caret-position="-1171">
+          <caret line="12" column="96" selection-start-line="12" selection-start-column="96" selection-end-line="12" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Posts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="101" column="54" lean-forward="true" selection-start-line="101" selection-start-column="54" selection-end-line="101" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="104" column="17" lean-forward="true" selection-start-line="62" selection-end-line="104" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Single.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        <state relative-caret-position="-1615">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admins.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1110">
+          <caret line="138" column="41" selection-end-line="175" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
         </state>
       </provider>
     </entry>
